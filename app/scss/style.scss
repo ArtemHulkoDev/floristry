@@ -2,11 +2,200 @@
 @import 'global';
 @import 'fonts';
 
-html {
-  box-sizing: border-box;
+// start header
+
+.header {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
+.header__inner {
+  padding: 60px 90px 15px 95px;
 }
 
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 189px;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  span {
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    margin-left: 15px;
+  }
+}
+
+.menu__btn-burger {
+  div {
+    width: 23px;
+    height: 1px;
+    background-color: #ffffff;
+    & + div {
+      margin-top: 6px;
+    }
+  }
+}
+
+.header__title {
+  font-size: 120px;
+  line-height: 132px;
+  text-align: center;
+  margin: 0 auto 80px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  max-width: 818px;
+}
+
+.header__btn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 199px;
+  text-transform: uppercase;
+  padding: 19px 30px 16px;
+  letter-spacing: 0.15em;
+  border: 1px solid #FFFFFF;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  margin-bottom: 40px;
+  transition: all ease .5s;
+  &:hover {
+    background: #fff;
+    color: #000;
+  }
+}
+
+.header__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  a + a {
+    margin-top: 24px;
+  }
+}
+
+.social__inst:hover {
+  rect {
+    stroke: #000;
+    transition: all ease .3s;
+  }
+  circle {
+    fill: #000;
+    stroke: #000;
+    transition: all ease .3s;
+  }
+ }
+
+.social__facebook:hover {
+  rect {
+    stroke: #000;
+    transition: all ease .3s;
+  }
+  path {
+    fill: #000;
+    transition: all ease .3s;
+  }
+}
+
+.social__whatsapp:hover {
+  path {
+    fill: #000;
+    transition: all ease .3s;
+  }
+}
+
+.social__vk:hover {
+  rect {
+    stroke: #000;
+    transition: all ease .3s;
+  }
+  path {
+    fill: #000;
+    transition: all ease .3s;
+  }
+}
+
+.mouse-scroll {
+  margin: -35px auto 0;
+  width: 36.28px;
+  height: 56px;
+  border: 0.7px solid #FFFFFF;
+  border-radius: 22px;
+  background: rgba(36, 0, 0, 0.3);
+  cursor: pointer;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    height: 9.46px;
+    border: 0.7px solid #FFFFFF;
+    left: 17px;
+    top: 10px;
+    animation-name: scroll-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+}  
+
+.catalog-anchor {
+  transform: rotate(90deg);
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  position: relative;
+  &::after {
+    content: '\2193';
+    position: absolute;
+    transform: rotate(-90deg);
+    font-size: 23px;
+    top: -1px;
+    right: -30px;
+    transition: all ease .3s;
+  }
+  &:hover {
+    &::after {
+      right: -50px;
+    }
+  }
+}
+
+.header__gradient {
+  height: 75px;
+  background: linear-gradient(0deg, #3B181E 3.33%, rgba(59, 24, 30, 0) 100%);
+}
+
+
+// end header
+
+// animations
+
+@keyframes scroll-animation {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    top: 10px;
+    opacity: 1;
+  }
+  70% {
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

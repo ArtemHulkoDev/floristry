@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: $text;
+}
+
+body {
+  font-family: 'Forum', cursive;
+  font-weight: 400;
+  color: $text;
+  font-size: 18px;
+  margin: 0 auto;
+}
