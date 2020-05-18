@@ -82,7 +82,7 @@
   display: flex;
   flex-direction: column;
   a + a {
-    margin-top: 24px;
+    margin-top: 20px;
   }
 }
 
@@ -177,6 +177,94 @@
 
 
 // end header
+// start burger-nav
+
+.burger-nav {
+  background-color: #3B181E;
+  padding: 60px 95px 110px;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  transition: all ease .7s;
+  &.active {
+    left: 0;
+  }
+  .logo {
+    text-align: center;
+    margin-bottom: 150px;
+  }
+  .social {
+    margin-top: -70px;
+    width: 25px;
+    a {
+      opacity: 0.5;
+      transition: all ease .3s;
+      & + a {
+        margin-top: 20px;
+      }
+    }
+    .social__inst:hover, .social__facebook:hover, .social__whatsapp:hover, .social__vk:hover {
+      opacity: 1;
+      rect {
+        stroke: #fff;
+      }
+      path {
+        fill: #fff;
+      }
+      circle {
+        fill: #fff;
+        stroke: #fff;
+      }
+    }
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 70px;
+  right: 130px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  div {
+    position: absolute;
+    height: 1px;
+    width: 28px;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: rotate(45deg);
+    + div {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.burger__menu {
+  text-align: center;
+  li {
+    width: 435px;
+    min-height: 105px;
+    margin: 0 auto;
+    margin-top: 57px;
+    &:nth-child(3) {
+      min-height: 55px;
+    }
+  }
+  a {
+    font-size: 35px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    transition: all ease .3s;
+    &:hover {
+      font-size: 45px;
+      opacity: 1;
+    }
+  }
+}
+
+// end burger-nav
 // start catalog section
 
 .catalog {
@@ -227,10 +315,16 @@
   &:hover {
     border: 1px solid rgba(255, 255, 255, 0.2);
     .catalog__item-btn {
-      display: inline-block;
+      opacity: 1;
+    }
+    .catalog__item-title {
+      margin-bottom: 20px;
     }
     .catalog__item-box::before {
       background-color: rgba(0, 0, 0, 0.6);
+    }
+    .catalog__item-number::after {
+      width: 70px;
     }
   }
 }
@@ -261,14 +355,16 @@
 .catalog__item-number {
   font-size: 20px;
   position: relative;
+  transition: all ease .3s;
   &::after {
     position: absolute;
     content: '';
-    width: 70px;
+    width: 0px;
     height: 1px;
     background-color: #fff;
     bottom: 6px;
     left: 30px;
+    transition: all ease .5s;
   }
 }
 
@@ -279,6 +375,8 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   opacity: 0.9;
+  margin-bottom: -51px;
+  transition: all ease .5s;
 }
 
 .catalog__item-btn {
@@ -287,12 +385,12 @@
   text-transform: uppercase;
   text-align: center;
   color: #010001;
-  margin-top: 20px;
   max-width: 199px;
   padding: 19px 30px;
   background-color: #fff;
   position: relative;
-  display: none;
+  opacity: 0;
+  transition: all ease .5s;
 }
 
 // end catalog section
@@ -455,3 +553,11 @@
     opacity: 0;
   }
 }
+
+@keyframes hover-animation {
+  0% {
+    opacity: 0;
+  }
+
+}
+
