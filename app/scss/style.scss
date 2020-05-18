@@ -8,6 +8,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .header__inner {
@@ -176,7 +177,262 @@
 
 
 // end header
+// start catalog section
 
+.catalog {
+  background-color: #3B181E;
+  padding: 170px 100px;
+}
+
+.catalog__title {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 230px;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding-bottom: 25px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 85.5px;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0px;
+    left: 70px;
+  }
+}
+
+.catalog__bg-title {
+  font-size: 182px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.03;
+  margin-top: -33px;
+}
+
+.catalog__items {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+.catalog__item {
+  margin-top: -100px;
+  padding: 10px;
+  transition: all ease .5s;
+  border: 1px solid #3B181E;
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    .catalog__item-btn {
+      display: inline-block;
+    }
+    .catalog__item-box::before {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+.catalog__item-box {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 275px;
+  padding: 36px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    transition: all ease .5s;
+  }
+}
+
+.catalog__item-number {
+  font-size: 20px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 1px;
+    background-color: #fff;
+    bottom: 6px;
+    left: 30px;
+  }
+}
+
+.catalog__item-title {
+  margin-top: auto;
+  font-size: 16px;
+  line-height: 27px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.9;
+}
+
+.catalog__item-btn {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #010001;
+  margin-top: 20px;
+  max-width: 199px;
+  padding: 19px 30px;
+  background-color: #fff;
+  position: relative;
+  display: none;
+}
+
+// end catalog section
+// start special-offer section
+
+.special-offer {
+  padding-bottom: 170px;
+  background-color: #3B181E;
+}
+
+.special-offer__inner {
+  display: flex;
+  justify-content: center;
+}
+
+.special-offer__box {
+  max-width: 350px;
+  width: 100%;
+  margin-top: 65px;
+}
+
+.special-offer__title {
+  font-size: 30px;
+  line-height: 51px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 85.5px;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+  }
+}
+
+.special-offer__text {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 45px;
+}
+
+.special-offer__btn {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 17px 30px;
+  background-color: #000;
+  transition: all ease .3s;
+  &:hover {
+    color: #000000;
+    background-color: #fff;
+  }
+}
+
+.special-offer__img {
+  margin-left: 150px;
+}
+
+// end special-offer section
+// start footer
+
+.footer {
+  background-color: #3B181E;
+  padding: 0 52px 30px;
+}
+
+.footer__inner {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.footer__menu {
+  margin-bottom: 30px;
+}
+
+.footer__menu-item {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all ease .5s;
+  & + .footer__menu-item {
+    margin-left: 50px;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+
+.footer__social {
+  a + a {
+    margin-left: 50px;
+  }
+}
+
+.footer__inst:hover {
+  rect {
+    stroke: #000;
+    transition: all ease .3s;
+  }
+  circle {
+    fill: #000;
+    stroke: #000;
+    transition: all ease .3s;
+  }
+ }
+
+.footer__facebook:hover {
+  rect {
+    stroke: #000;
+    transition: all ease .3s;
+  }
+  path {
+    fill: #000;
+    transition: all ease .3s;
+  }
+}
+
+.footer__whatsapp:hover {
+  path {
+    fill: #000;
+    transition: all ease .3s;
+  }
+}
+
+.footer__vk:hover {
+  rect {
+    stroke: #000;
+    transition: all ease .3s;
+  }
+  path {
+    fill: #000;
+    transition: all ease .3s;
+  }
+}
+
+// end footer
 // animations
 
 @keyframes scroll-animation {
