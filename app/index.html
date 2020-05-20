@@ -16,7 +16,7 @@
   <header class="header" style="background-image: url(images/header-img.jpg);">
     <div class="header__inner">
       <div class="header__top">
-        <a href="#"><img src="images/logo.png" alt=""></a>
+        <a href="index.html"><img src="images/logo.png" alt=""></a>
         <div class="menu__btn">
           <div class="menu__btn-burger">
             <div></div>
@@ -67,17 +67,17 @@
   <!-- end header -->
   <!-- start burger-nav -->
 
-  <nav class="burger-nav active">
+  <nav class="burger-nav">
     <div class="close-btn">
       <div></div>
       <div></div>
     </div>
     <div class="logo"><img src="images/logo.png" alt=""></div>
     <ul class="burger__menu">
-      <li><a href="#">свадебная флористика</a></li>
-      <li><a href="#">букеты на любые мероприятия</a></li>
-      <li><a href="#">композиции</a></li>
-      <li><a href="#">оформление мероприятий</a></li>
+      <li><a href="wedding-bouquets.html">свадебная флористика</a></li>
+      <li><a href="event-bouquets.html">букеты на любые мероприятия</a></li>
+      <li><a href="composition.html">композиции</a></li>
+      <li><a href="event-design.html">оформление мероприятий</a></li>
     </ul>
     <div class="social">
       <a href="#" class="social__inst">
@@ -119,28 +119,28 @@
         <div class="catalog__item-box" style="background-image: url(images/catalog/catalog-item1.jpg);">
           <div class="catalog__item-number">01</div>
           <div class="catalog__item-title">букет невесты и свадебное оформление</div>
-          <a href="#" class="catalog__item-btn">смотреть работы</a>
+          <a href="wedding-bouquets.html" class="catalog__item-btn">смотреть работы</a>
         </div>
       </div>
       <div class="catalog__item">
         <div class="catalog__item-box" style="background-image: url(images/catalog/catalog-item2.jpg);">
           <div class="catalog__item-number">02</div>
           <div class="catalog__item-title">букеты на торжества</div>
-          <a href="#" class="catalog__item-btn">смотреть работы</a>
+          <a href="event-bouquets.html" class="catalog__item-btn">смотреть работы</a>
         </div>
       </div>
       <div class="catalog__item">
         <div class="catalog__item-box" style="background-image: url(images/catalog/catalog-item3.jpg);">
           <div class="catalog__item-number">03</div>
           <div class="catalog__item-title">композиции</div>
-          <a href="#" class="catalog__item-btn">смотреть работы</a>
+          <a href="composition.html" class="catalog__item-btn">смотреть работы</a>
         </div>
       </div>
       <div class="catalog__item">
         <div class="catalog__item-box" style="background-image: url(images/catalog/catalog-item4.jpg);">
           <div class="catalog__item-number">04</div>
           <div class="catalog__item-title">оформление мероприятий</div>
-          <a href="#" class="catalog__item-btn">смотреть работы</a>
+          <a href="event-design.html" class="catalog__item-btn">смотреть работы</a>
         </div>
       </div>
     </div>
@@ -156,7 +156,7 @@
         <div class="special-offer__text">
           При заказе свадебного оформления предоставляется скидка на букет невесты и бутоньерку в размере 30%
         </div>
-        <a href="#" class="special-offer__btn">заказать оформление</a>
+        <a data-fancybox data-src="#popup" data-touch="false" href="javascript:;" class="special-offer__btn">заказать оформление</a>
       </div>
       <div class="special-offer__img">
         <img src="images/special-offer.jpg" alt="">
@@ -170,11 +170,11 @@
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__menu">
-        <a class="footer__menu-item" href="#">Cвадебная флористика</a>
-        <a class="footer__menu-item" href="#">Букеты на любые мероприятия</a>
-        <a class="footer__menu-item" href="#">Букеты невесты</a>
-        <a class="footer__menu-item" href="#">Композиции</a>
-        <a class="footer__menu-item" href="#">Оформление мероприятий</a>
+        <a class="footer__menu-item" href="wedding-bouquets.html">Cвадебная флористика</a>
+        <a class="footer__menu-item" href="event-bouquets.html">Букеты на любые мероприятия</a>
+        <a class="footer__menu-item" href="wedding-bouquets.html">Букеты невесты</a>
+        <a class="footer__menu-item" href="composition.html">Композиции</a>
+        <a class="footer__menu-item" href="event-design.html">Оформление мероприятий</a>
       </div>
       <div class="footer__social">
         <a class="footer__inst" href="#">
@@ -207,6 +207,27 @@
   </footer>
 
   <!-- end footer -->
+  <!-- start popup -->
+
+  <div id="popup">
+    <div class="popup__inner">
+      <img class="popup__img" src="images/popup.jpg" alt="">
+      <div class="popup__form">
+        <div class="popup__title">
+          Оставьте свой
+          номер и мы вам
+          перезвоним!
+        </div>
+        <form>
+          <input type="text" placeholder="Имя" required>
+          <input type="text" placeholder="Телефон" required>
+          <button type="submit">ПОЗВОНИТЕ МНЕ</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- end popup -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>

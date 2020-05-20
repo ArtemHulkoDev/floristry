@@ -9,8 +9,10 @@
   "author": "Artem Gulko",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^4.1.0",
     "browser-sync": "^2.26.7",
+    "fancybox": "^3.0.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
