@@ -633,6 +633,9 @@
     position: relative;
     z-index: 1;
   }
+  .menu__btn {
+    display: none;
+  }
 }
 
 .event-bouquets__content {
@@ -676,16 +679,18 @@
 
 .slider__bouquets {
   margin-bottom: 150px;
-  width: 552px;
+  max-width: 552px;
 }
 
 .slider__item {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  max-width: 123px;
-  height: 123px;
-  cursor: pointer;
+  div {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 123px;
+    height: 123px;
+    cursor: pointer;
+  }
 }
 
 .slick-arrow {
@@ -751,6 +756,7 @@
   0% {
     opacity: 0;
   }
-
 }
+
+@import 'media';
 

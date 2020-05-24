@@ -8,9 +8,28 @@ $(function(){
     arrows: true,
     prevArrow: '<button class="slick-arrow slick-prev"><img src="images/prev-arrow.png" alt=""></button>',
     nextArrow: '<button class="slick-arrow slick-next"><img src="images/next-arrow.png" alt=""></button>',
+    responsive: [
+      {
+        breakpoint: 615,
+        settings: {
+          slidesToShow: 3,
+        }
+      }
+    ]
   });
 
   $(".catalog-anchor").on("click", function (event) {
+    //отменяем стандартную обработку нажатия по ссылке
+    event.preventDefault();
+    //забираем идентификатор бока с атрибута href
+    var id  = $(this).attr('href'),
+    //узнаем высоту от начала страницы до блока на который ссылается якорь
+    top = $(id).offset().top;
+    //анимируем переход на расстояние - top за 1000 мс
+    $('body,html').animate({scrollTop: top}, 1000);
+  });
+
+  $(".header__btn").on("click", function (event) {
     //отменяем стандартную обработку нажатия по ссылке
     event.preventDefault();
     //забираем идентификатор бока с атрибута href
